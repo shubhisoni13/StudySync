@@ -1,0 +1,590 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  text-align: center;
+  background-color: white;
+  padding: 0;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+  align-items: center;
+  padding: 0.5rem;
+}
+.headerlogo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  gap: 0.625rem;
+}
+.logoicon {
+  height: 5rem;
+  width: 1.9rem;
+}
+.logotext {
+  font-size: 2rem;
+  font-weight: 850;
+}
+.nav {
+  display: none;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+.navlink {
+  color: blue;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transform: color 0.1s;
+}
+.navlink:hover {
+  color: var(--link-color);
+}
+.contactbutton {
+  display: none;
+  border: none;
+  border-radius: 0.375rem;
+  background-color: blue;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transform: all 0.1s;
+}
+
+@media screen and (min-width: 768px) {
+  .contactbutton {
+    display: block;
+  }
+}
+.contactbutton:hover {
+  background-color: lightblue;
+}
+
+.menuicon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.menubutton {
+  background-color: whitesmoke;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menubutton {
+    display: block;
+  }
+}
+.mainsection {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0.6rem;
+}
+.contentleft {
+  text-align: center;
+  animation: slidefromleft 1s ease forwards;
+  opacity: 0;
+}
+@keyframes slidefromleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.sectionlabel {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: blue;
+}
+.sectiontitle {
+  font-size: 2.5rem;
+  color: black;
+  padding: 1.1rem;
+}
+.sectiondescription {
+  color: grey;
+  font-size: 1.13rem;
+}
+.buttongroup {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.tourbutton {
+  border: none;
+  border-radius: 0.375rem;
+  background-color: darkgray;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transform: all 0.1s;
+  margin-top: 1rem;
+  color: white;
+}
+.startbutton {
+  border: none;
+  border-radius: 0.375rem;
+  background-color: blue;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transform: all 0.1s;
+  margin-top: 1rem;
+}
+
+.startbutton:hover,
+.tourbutton:hover {
+  background-color: lightblue;
+}
+.contentright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagecontainer {
+  border: none;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px black;
+  height: 52vh;
+}
+.sectionimage {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .mainsection {
+    flex-direction: row;
+  }
+
+  .contentleft {
+    max-width: 50%;
+    text-align: left;
+  }
+  .sectiontitle {
+    padding-left: 0;
+  }
+  .buttongroup {
+    padding-left: 0;
+  }
+  .sectionlabel {
+    font-size: 1rem;
+  }
+  .sectiontitle {
+    font-size: 4rem;
+  }
+  .imagecontainer {
+    height: 67vh;
+  }
+  .textdescription {
+    font-size: 1rem;
+    color: grey;
+    width: 78%;
+  }
+}
+.companycontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  animation: slidefromleft 1s ease forwards;
+}
+.companygrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 1rem;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 0.625rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.8rem 2.5rem;
+}
+.companylogo {
+  font-size: 1rem;
+  font-weight: 500;
+  color: grey;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logos {
+  height: 1.5rem;
+}
+.logotxt {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .companygrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.companytitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.featurecontainer {
+  background-color: lightgrey;
+  padding: 2.5rem 0;
+  text-align: center;
+  width: 100%;
+}
+.featurecontent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.maininfo {
+  display: flex;
+  flex-direction: column;
+}
+.maintitle {
+  font-size: 2.15rem;
+}
+.maindescription {
+  color: gray;
+  font-size: 1rem;
+}
+.featuregrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1.3rem;
+}
+.iconcontainer {
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.featureimg {
+  height: 2.1rem;
+  width: 2.1rem;
+}
+.featurecard {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(127, 127, 174);
+  border-radius: 1rem;
+}
+
+.featuretitle {
+  gap: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  color: white;
+  font-size: medium;
+}
+.featuredescription {
+  color: white;
+  font-size: small;
+}
+.featurecard:nth-child(2) {
+  background-color: rgb(240, 74, 74);
+}
+.featurecard:nth-child(3) {
+  background-color: rgb(220, 109, 220);
+}
+.featurecard:nth-child(4) {
+  background-color: rgb(55, 43, 224);
+}
+.featurecard:nth-child(5) {
+  background-color: rgb(238, 189, 75);
+}
+.featurecard:nth-child(6) {
+  background-color: rgb(66, 137, 156);
+}
+@media screen and (max-width: 768px) {
+  .featuregrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.testimonialcontainer {
+  background-color: white;
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.testimonialtitle {
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: solid;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.testimonialgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.testimonialcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonialcard {
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rbga(0, 0, 0, 1);
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s linear 0.1s;
+}
+.testimonialcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rbga(0, 0, 0, 2);
+  border: 1px solid blue;
+}
+.face {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.tname {
+  font-weight: bold;
+  font-size: medium;
+  color: blue;
+}
+
+.newslettercontainer {
+  background-color: white;
+  padding: 2rem;
+  max-width: 1083px;
+  height: 40vh;
+  margin: 0 auto;
+  /*margin-left:6rem;
+        margin-right:6rem;*/
+}
+.newslettercontent {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgrey;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.left {
+  height: 100%;
+  width: 50%;
+}
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /*border-top-left-radius: 8px;
+        border-bottom-left-radius:8px;*/
+}
+.newsright {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  /*align-items:flex-start;*/
+  width: 50%;
+}
+
+.newstitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(51, 51, 236);
+  text-align: left;
+}
+.newsdescription {
+  font-size: small;
+  text-align: left;
+  padding: 0.5rem;
+}
+.email {
+  display: flex;
+  height: 30px;
+  margin-right: 1rem;
+  margin-left: 7px;
+}
+.newsform {
+  align-items: flex-start;
+  display: flex;
+}
+.newsbutton {
+  background-color: rgb(51, 51, 236);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.newspolicy {
+  font-size: small;
+  padding: 0.5rem;
+  text-align: left;
+}
+.footercontainer {
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+}
+.footer {
+  max-width: 1280px;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footertop {
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.logof {
+  display: flex;
+  width: 2rem;
+  height: 6rem;
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+.logolink {
+  display: flex;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.28rem;
+  font-weight: 800;
+  padding-right: 8rem;
+}
+.footercompanylogo {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fillertext {
+  display: flex;
+  font-size: 1rem;
+  padding-left: 4rem;
+  font-size: small;
+  color: grey;
+  font-weight: bold;
+}
+.sociallinks {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-left: 4rem;
+}
+.socialicon {
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.footergrid {
+  width: 58%;
+  padding-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 9rem;
+}
+.footergridheading {
+  margin-bottom: 1.5rem;
+  font-size: small;
+  font-weight: bold;
+  color: black;
+  text-decoration: solid;
+}
+ul {
+  list-style-type: none;
+}
+.footerlink {
+  color: grey;
+  font-size: small;
+}
+.footerlinklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.footercopy {
+  color: grey;
+  font-size: 0.75rem;
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid grey;
+}
+@media screen and (max-width: 1080px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footertop {
+    padding-left: 10rem;
+  }
+  .footergrid {
+    align-self: center;
+    justify-content: space-evenly;
+  }
+  .sociallinks,
+  .fillertext {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 840px) {
+  .footergrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
